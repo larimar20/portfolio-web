@@ -5,22 +5,28 @@ export type ProjectDetail = {
   subtitle: string;
   description: string[];
   heroImage: string;
+  heroImageMobile?: string;
+  videoThumbnailMobile?: string;
   gallery: GalleryRow[];
+  mobileGallery?: GalleryRow[];
 };
 
 export type GalleryRow = {
-  type: "full" | "split" | "video" | "image-video" | "triple";
+  type: "full" | "split" | "video" | "image-video" | "triple" | "stack";
   height?: number;
+  mobileAspectRatio?: string;
   title?: string;
   images?: GalleryImage[];
   video?: { src: string; alt: string; theme?: "light" | "dark" };
   /** CSS position of the video overlay within the image (percentages) */
   videoPosition?: { top: string; left: string; width: string; height: string };
+  mobileVideoPosition?: { top: string; left: string; width: string; height: string };
 };
 
 export type GalleryImage = {
   src: string;
   alt: string;
+  mobileSrc?: string;
   label?: string;
   link?: string;
 };
@@ -38,6 +44,8 @@ export const projectDetails: Record<string, ProjectDetail> = {
       "Posteriormente, se creó un Design System para garantizar la coherencia visual y la escalabilidad del producto. El resultado es una propuesta que combina un sistema de rutas inteligentes, una función de emergencia y un asistente basado en IA, integrando investigación, estrategia, UX y UI en un único producto digital.",
     ],
     heroImage: "/images/projects/wava/hero.png",
+    heroImageMobile: "/images/gallerymobile1.png",
+    videoThumbnailMobile: "/images/galleryobile2.1.png",
     gallery: [
       {
         type: "full",
@@ -72,6 +80,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
       "Posteriormente, se diseñó un Design System para garantizar la coherencia visual y la escalabilidad del producto. El resultado es una aplicación que permite explorar los mejores clubes, consultar información, comprar entradas, apuntarse a listas o reservar mesas VIP, integrando investigación, estrategia, UX y UI en una experiencia digital completa.",
     ],
     heroImage: "/images/projects/nite-up/hero.png",
+    heroImageMobile: "/images/gallerymobile1.2.png",
     gallery: [
       {
         type: "full",
@@ -81,8 +90,8 @@ export const projectDetails: Record<string, ProjectDetail> = {
       {
         type: "split",
         images: [
-          { src: "/images/projects/nite-up/gallery-2.png", alt: "Nite Up detalle" },
-          { src: "/images/projects/nite-up/gallery-3.png", alt: "Nite Up detalle" },
+          { src: "/images/projects/nite-up/gallery-2.png", alt: "Nite Up detalle", mobileSrc: "/images/gallerymobile1.3.png" },
+          { src: "/images/projects/nite-up/gallery-3.png", alt: "Nite Up detalle", mobileSrc: "/images/gallerymobile1.4.png" },
         ],
       },
       {
@@ -94,7 +103,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
   },
   "art-promocions": {
     slug: "art-promocions",
-    year: "2025",
+    year: "2026",
     title: "Art Promocions",
     subtitle:
       "Web para una inmobiliaria del Maresme con más de 20 años de experiencia, diseñada para dar visibilidad a sus propiedades y establecer su presencia digital.",
@@ -105,6 +114,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
       "Finalmente, se desarrolló un Design System que asegura la coherencia visual de toda la web, definiendo estilos, componentes y jerarquías tipográficas. El resultado es una plataforma digital que refleja la experiencia de la inmobiliaria y mejora la accesibilidad a su catálogo de propiedades, integrando estrategia, UX y UI en una solución funcional y escalable.",
     ],
     heroImage: "/images/projects/art-promocions/hero.png",
+    heroImageMobile: "/images/gallerymobile3.1.png",
     gallery: [
       {
         type: "full",
@@ -114,7 +124,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
       {
         type: "split",
         images: [
-          { src: "/images/projects/art-promocions/gallery-2.png", alt: "Art Promocions desktop" },
+          { src: "/images/projects/art-promocions/gallery-2.png", alt: "Art Promocions desktop", mobileSrc: "/images/gallerymobile3.3.png" },
           { src: "/images/projects/art-promocions/gallery-3.png", alt: "Art Promocions mobile" },
         ],
       },
@@ -138,6 +148,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
       "El resultado es una plataforma renovada que mejora la experiencia del usuario, optimiza la navegación y refuerza el posicionamiento de la inmobiliaria, integrando rebranding, UX y UI en una solución más clara y eficiente.",
     ],
     heroImage: "/images/projects/alquilarg/hero.png",
+    heroImageMobile: "/images/gallerymobile4.png",
     gallery: [
       {
         type: "full",
@@ -148,7 +159,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
         type: "split",
         images: [
           { src: "/images/projects/alquilarg/gallery-2.png", alt: "Alquilarg detalle" },
-          { src: "/images/projects/alquilarg/gallery-3.png", alt: "Alquilarg detalle" },
+          { src: "/images/projects/alquilarg/gallery-3.png", alt: "Alquilarg detalle", mobileSrc: "/images/gallerymobile4.4.png" },
         ],
       },
       {
@@ -169,6 +180,8 @@ export const projectDetails: Record<string, ProjectDetail> = {
       "Posteriormente, se diseñó un Design System y una identidad visual que reflejan los valores de la cerámica contemporánea, garantizando una experiencia coherente y escalable en toda la plataforma. El resultado es una web responsive que integra investigación, estrategia, branding, UX y UI para ofrecer una experiencia inspiradora y centrada en las necesidades de la comunidad ceramista.",
     ],
     heroImage: "/images/projects/glaze-magazine/hero.png",
+    heroImageMobile: "/images/gallerymobile5.0.png",
+    videoThumbnailMobile: "/images/gallerymobile5.png",
     gallery: [
       {
         type: "full",
@@ -178,8 +191,8 @@ export const projectDetails: Record<string, ProjectDetail> = {
       {
         type: "split",
         images: [
-          { src: "/images/projects/glaze-magazine/gallery-2.png", alt: "Glaze Magazine mobile" },
-          { src: "/images/projects/glaze-magazine/gallery-3.png", alt: "Glaze Magazine desktop" },
+          { src: "/images/projects/glaze-magazine/gallery-2.png", alt: "Glaze Magazine mobile", mobileSrc: "/images/gallerymobile5.3.png" },
+          { src: "/images/projects/glaze-magazine/gallery-3.png", alt: "Glaze Magazine desktop", mobileSrc: "/images/gallerymobile5.4.png" },
         ],
       },
       {
@@ -204,6 +217,8 @@ export const projectDetails: Record<string, ProjectDetail> = {
       "Posteriormente, se creó un Design System para garantizar la coherencia visual y funcional en ambos dispositivos. El resultado es una experiencia conectada que permite explorar canciones, unirse a partidas, gestionar la participación desde el móvil y disfrutar del karaoke en la pantalla principal, integrando investigación, estrategia, UX y UI en un producto de entretenimiento multidispositivo.",
     ],
     heroImage: "/images/projects/kankyo/hero.png",
+    heroImageMobile: "/images/gallerymobile6.png",
+    videoThumbnailMobile: "/images/gallerymobile6.6.png",
     gallery: [
       {
         type: "full",
@@ -214,10 +229,11 @@ export const projectDetails: Record<string, ProjectDetail> = {
         type: "split",
         images: [
           { src: "/images/projects/kankyo/gallery-2.png", alt: "Kankyo mobile" },
-          { src: "/images/projects/kankyo/gallery-3.png", alt: "Kankyo Smart TV" },
+          { src: "/images/projects/kankyo/gallery-3.png", alt: "Kankyo Smart TV", mobileSrc: "/images/gallerymobile6.4.jpg" },
         ],
         video: { src: "/images/projects/kankyo/video-1.mp4", alt: "Demo Kankyo karaoke" },
         videoPosition: { top: "14%", left: "14%", width: "72%", height: "53%" },
+        mobileVideoPosition: { top: "17%", left: "9%", width: "82%", height: "27%" },
       },
       {
         type: "full",
@@ -241,6 +257,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
       "Inspirado en la simplicidad del diseño nórdico, Isla Nord apuesta por un lenguaje visual limpio, atemporal y funcional. Cada proyecto se desarrolla desde una visión estratégica, buscando crear experiencias digitales intuitivas que conecten con las personas y ayuden a las marcas a crecer de forma consistente.",
     ],
     heroImage: "/images/projects/isla-nord/hero.png",
+    heroImageMobile: "/images/gallerymobile7.png",
     gallery: [
       {
         type: "split",
@@ -277,6 +294,42 @@ export const projectDetails: Record<string, ProjectDetail> = {
         ],
       },
     ],
+    mobileGallery: [
+      {
+        type: "full",
+        mobileAspectRatio: "353/77",
+        images: [{ src: "/images/gallerymobile7.1.png", alt: "Isla Nord" }],
+      },
+      {
+        type: "split",
+        images: [
+          { src: "/images/gallerymobile7.2.png", alt: "Isla Nord" },
+          { src: "/images/gallerymobile7.3.png", alt: "Isla Nord branding" },
+        ],
+      },
+      {
+        type: "full",
+        mobileAspectRatio: "353/77",
+        images: [{ src: "/images/gallerymobile7.4.png", alt: "Isla Nord" }],
+      },
+      {
+        type: "stack",
+        images: [
+          { src: "/images/gallery8.4.png", alt: "Isla Nord fotografía" },
+          { src: "/images/gallery8.5.png", alt: "Isla Nord marca" },
+        ],
+      },
+      {
+        type: "triple",
+        title: "Proyectos desarrollados en Isla Nord",
+        images: [
+          { src: "/images/projects/isla-nord/gallery-7.png", alt: "Web Isla Nord", label: "Web — Isla Nord", link: "/proyectos/isla-nord" },
+          { src: "/images/projects/isla-nord/gallery-8.png", alt: "Web Alquilarg", label: "Web — Alquilarg", link: "/proyectos/alquilarg" },
+          { src: "/images/gallerymobileart.png", alt: "Web Art Promocions", label: "Web — Art Promocions", link: "/proyectos/art-promocions" },
+          { src: "/images/projects/isla-nord/gallery-10.png", alt: "App Wava", label: "App — Wava", link: "/proyectos/wava" },
+        ],
+      },
+    ],
   },
   "no-raw": {
     slug: "no-raw",
@@ -290,6 +343,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
       "El resultado es una identidad visual versátil y reconocible que construye un universo de marca sólido y coherente en sus diferentes aplicaciones.",
     ],
     heroImage: "/images/gallery9.png",
+    heroImageMobile: "/images/gallerymobilehero10.png",
     gallery: [
       {
         type: "full",
@@ -328,6 +382,60 @@ export const projectDetails: Record<string, ProjectDetail> = {
         images: [{ src: "/images/gallery9.10.png", alt: "No Raw logo oscuro" }],
       },
     ],
+    mobileGallery: [
+      {
+        type: "full",
+        mobileAspectRatio: "353/77",
+        images: [{ src: "/images/gallerymobile9.02.png", alt: "No Raw Ceramics" }],
+      },
+      {
+        type: "split",
+        images: [
+          { src: "/images/gallerymobile9.03.png", alt: "No Raw caballete" },
+          { src: "/images/gallerymobile9.04.png", alt: "No Raw tarjetas" },
+        ],
+      },
+      {
+        type: "split",
+        images: [
+          { src: "/images/gallerymobile9.05.png", alt: "No Raw logo" },
+          { src: "/images/gallerymobile066.png", alt: "No Raw logo detalle" },
+        ],
+      },
+      {
+        type: "full",
+        mobileAspectRatio: "706/997",
+        images: [{ src: "/images/gallerymobile9.06.png", alt: "No Raw tipografía Times" }],
+      },
+      {
+        type: "full",
+        mobileAspectRatio: "707/906",
+        images: [{ src: "/images/herolineimage.png", alt: "No Raw tipografía Heroline" }],
+      },
+      {
+        type: "full",
+        mobileAspectRatio: "353/260",
+        images: [{ src: "/images/gallerymobile9.08.png", alt: "No Raw paleta de colores" }],
+      },
+      {
+        type: "full",
+        mobileAspectRatio: "353/189",
+        images: [{ src: "/images/gallerymobile9.09.png", alt: "No Raw ilustraciones" }],
+      },
+      {
+        type: "stack",
+        mobileAspectRatio: "353/267",
+        images: [
+          { src: "/images/gallerymobile9.10.png", alt: "No Raw tote bag" },
+          { src: "/images/gallerymobile9.11.png", alt: "No Raw camisetas" },
+        ],
+      },
+      {
+        type: "full",
+        mobileAspectRatio: "353/77",
+        images: [{ src: "/images/gallerymobile9.12.png", alt: "No Raw Ceramics" }],
+      },
+    ],
   },
   beyond: {
     slug: "beyond",
@@ -341,6 +449,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
       "Se diseñaron los elementos clave de la identidad, incluyendo logotipo, paleta cromática, tipografía, recursos gráficos y normas de aplicación, asegurando una comunicación consistente y reconocible en todos los puntos de contacto. El resultado es una marca contemporánea, versátil y escalable que dota al evento de una personalidad sólida y diferencial.",
     ],
     heroImage: "/images/Beyond.png",
+    videoThumbnailMobile: "/images/gallerymobile10.6.png",
     gallery: [
       {
         type: "full",
@@ -363,6 +472,30 @@ export const projectDetails: Record<string, ProjectDetail> = {
           { src: "/images/gallery10.5.png", alt: "Beyond carteles calle" },
         ],
         video: { src: "/images/video Beyond.mov", alt: "Demo Beyond web" },
+      },
+    ],
+    mobileGallery: [
+      {
+        type: "full",
+        images: [{ src: "/images/gallery10.1.png", alt: "Beyond Cybersecurity escenario" }],
+      },
+      {
+        type: "split",
+        images: [
+          { src: "/images/gallerymobile10.3.png", alt: "Beyond trípticos" },
+          { src: "/images/gallerymobile10.4.png", alt: "Beyond banner welcome" },
+        ],
+      },
+      {
+        type: "full",
+        images: [{ src: "/images/gallerymobile10.5.png", alt: "Beyond carteles y branding" }],
+      },
+      {
+        type: "split",
+        images: [
+          { src: "/images/gallerymobile10.6.png", alt: "Beyond carteles calle" },
+        ],
+        video: { src: "/images/video Beyond.mov", alt: "Demo Beyond web", theme: "dark" },
       },
     ],
   },

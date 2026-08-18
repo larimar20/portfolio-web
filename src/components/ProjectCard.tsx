@@ -31,7 +31,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         {project.tags.map((tag) => (
           <span
             key={tag}
-            className="border border-primary text-primary rounded-full px-[6px] py-[4px] md:px-[10px] md:py-[10px] text-[10px] md:text-[20px] font-neue capitalize leading-none"
+            className="border border-primary text-primary rounded-full px-[6px] py-[4px] md:px-[10px] md:py-[10px] text-[12px] md:text-[20px] font-neue capitalize leading-none"
           >
             {tag}
           </span>

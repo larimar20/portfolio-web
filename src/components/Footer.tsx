@@ -4,15 +4,15 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="px-5 md:px-16 pb-8">
-      <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between pt-2 border-t border-primary-light">
-        <div className="flex flex-col gap-4 md:flex-row md:items-center md:gap-[253px] text-primary text-[16px] md:text-[20px] font-neue">
+      <div className="flex flex-col items-center gap-8 md:flex-row md:items-start md:justify-between pt-4 md:pt-2 border-t border-primary-light">
+        <div className="flex flex-col items-center gap-6 md:flex-row md:items-center md:gap-[253px] text-primary text-[16px] md:text-[20px] font-neue">
           <a
             href="mailto:larimarm20@gmail.com"
             className="hover:opacity-70 transition-opacity"
           >
             larimarm20@gmail.com
           </a>
-          <div className="flex gap-6 md:gap-8">
+          <div className="flex justify-center gap-6 md:gap-8 w-full md:w-auto">
             <Link
               href="/"
               className="hover:opacity-70 transition-opacity uppercase"
@@ -33,7 +33,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className="flex items-center gap-[9px]">
+        <div className="flex items-center gap-6 md:gap-[9px]">
           <a
             href="https://linkedin.com"
             target="_blank"

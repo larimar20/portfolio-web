@@ -36,7 +36,7 @@ export default function Home() {
         </div>
 
         {/* Hero content */}
-        <div className="absolute left-[40%] top-[23%] w-[55%] md:left-[calc(50%+12px)] md:top-1/2 md:-translate-y-1/2 md:w-[412px] text-primary leading-[1]">
+        <div className="absolute left-[48%] top-[23%] w-[50%] md:left-[calc(50%+12px)] md:top-1/2 md:-translate-y-1/2 md:w-[412px] text-primary leading-[1]">
           <div className="flex flex-col font-neue font-extrabold capitalize">
             <span className="text-[15px] md:text-[20px]">UX/UI designer</span>
             <h1 className="text-[25px] md:text-[50px] leading-[1]">Larimar Muñoz</h1>
@@ -95,7 +95,7 @@ export default function Home() {
               <p className="font-neue text-[18px] md:text-[30px] capitalize">UX/UI</p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-[16px] md:gap-[56px] w-full">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-[40px] md:gap-[56px] w-full">
               {uxuiProjects.map((project) => (
                 <ProjectCard key={project.slug} project={project} />
               ))}
@@ -114,7 +114,7 @@ export default function Home() {
               <p className="font-neue text-[18px] md:text-[30px] capitalize">Gráfico</p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-[16px] md:gap-[56px] w-full">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-[40px] md:gap-[56px] w-full">
               {otrosProjects.map((project) => (
                 <ProjectCard key={project.slug} project={project} />
               ))}

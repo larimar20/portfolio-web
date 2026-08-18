@@ -7,9 +7,10 @@ type VideoPlayerProps = {
   alt: string;
   theme?: "light" | "dark";
   fit?: "cover" | "contain";
+  poster?: string;
 };
 
-export default function VideoPlayer({ src, alt, theme = "light", fit = "cover" }: VideoPlayerProps) {
+export default function VideoPlayer({ src, alt, theme = "light", fit = "cover", poster }: VideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -40,6 +41,7 @@ export default function VideoPlayer({ src, alt, theme = "light", fit = "cover" }
         loop
         muted
         playsInline
+        poster={poster}
         className={`w-full h-full ${fit === "contain" ? "object-contain" : "object-cover"}`}
         aria-label={alt}
       />
