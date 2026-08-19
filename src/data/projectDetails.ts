@@ -244,6 +244,27 @@ export const projectDetails: Record<string, ProjectDetail> = {
         video: { src: "/images/projects/kankyo/video-2.mp4", alt: "Demo Kankyo gameplay", theme: "dark" },
       },
     ],
+    mobileGallery: [
+      {
+        type: "full",
+        images: [{ src: "/images/projects/kankyo/gallery-1.png", alt: "Pantallas de Kankyo" }],
+      },
+      {
+        type: "split",
+        images: [
+          { src: "/images/projects/kankyo/gallery-2.png", alt: "Kankyo mobile" },
+        ],
+        video: { src: "/images/kankyovideotv.mov", alt: "Demo Kankyo karaoke", theme: "dark" },
+      },
+      {
+        type: "full",
+        images: [{ src: "/images/projects/kankyo/gallery-4.png", alt: "Pantallas de Kankyo" }],
+      },
+      {
+        type: "video",
+        video: { src: "/images/projects/kankyo/video-2.mp4", alt: "Demo Kankyo gameplay", theme: "dark" },
+      },
+    ],
   },
   "isla-nord": {
     slug: "isla-nord",
