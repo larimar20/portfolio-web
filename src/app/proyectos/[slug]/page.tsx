@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import VideoPlayer from "@/components/VideoPlayer";
 import ImageVideoOverlay from "@/components/ImageVideoOverlay";
 import MobileVideoPlayer from "@/components/MobileVideoPlayer";
+import MobileBackArrow from "@/components/MobileBackArrow";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -99,10 +100,8 @@ export default async function ProjectPage({ params }: Props) {
           </div>
         </div>
 
-        {/* Mobile back arrow - fixed like hamburger */}
-        <Link href="/" className="md:hidden fixed top-[67px] left-[20px] z-50">
-          <Image src="/images/Chevron-Left.svg" alt="Volver" width={24} height={24} />
-        </Link>
+        {/* Mobile back arrow - changes color on light backgrounds */}
+        <MobileBackArrow />
 
         {/* Mobile hero */}
         <div className="md:hidden relative w-full aspect-[393/604]">
