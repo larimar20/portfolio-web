@@ -41,7 +41,7 @@ export default function Header() {
 
       {/* Mobile menu overlay */}
       {menuOpen && (
-        <div className="md:hidden fixed inset-0 z-[9999] bg-[#f3f5f4] flex flex-col items-center justify-center gap-10">
+        <div className="md:hidden fixed z-[9999] bg-[#f3f5f4] flex flex-col items-center justify-center gap-10" style={{ top: "-50px", left: 0, right: 0, bottom: "-50px" }}>
           <button
             onClick={() => setMenuOpen(false)}
             className="absolute top-[67px] right-[20px] w-[46px] h-[46px] rounded-full bg-[#fcfdff] backdrop-blur-[10px] flex items-center justify-center text-primary text-[24px] font-neue"
