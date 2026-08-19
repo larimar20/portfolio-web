@@ -13,6 +13,10 @@ export const metadata: Metadata = {
   title: "Larimar Muñoz — UX/UI Designer",
   description:
     "Portfolio de Larimar Muñoz. Diseñadora UX/UI con foco en producto digital. Barcelona.",
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({
