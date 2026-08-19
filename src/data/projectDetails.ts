@@ -231,9 +231,31 @@ export const projectDetails: Record<string, ProjectDetail> = {
           { src: "/images/projects/kankyo/gallery-2.png", alt: "Kankyo mobile" },
           { src: "/images/projects/kankyo/gallery-3.png", alt: "Kankyo Smart TV", mobileSrc: "/images/gallerymobile6.4.jpg" },
         ],
-        video: { src: "/images/projects/kankyo/video-1.mp4", alt: "Demo Kankyo karaoke" },
+        video: { src: "/images/video-kankyo.mov", alt: "Demo Kankyo karaoke" },
         videoPosition: { top: "14%", left: "14%", width: "72%", height: "53%" },
         mobileVideoPosition: { top: "17%", left: "9%", width: "82%", height: "27%" },
+      },
+      {
+        type: "full",
+        images: [{ src: "/images/projects/kankyo/gallery-4.png", alt: "Pantallas de Kankyo" }],
+      },
+      {
+        type: "video",
+        video: { src: "/images/projects/kankyo/video-2.mp4", alt: "Demo Kankyo gameplay", theme: "dark" },
+      },
+    ],
+    mobileGallery: [
+      {
+        type: "full",
+        images: [{ src: "/images/projects/kankyo/gallery-1.png", alt: "Pantallas de Kankyo" }],
+      },
+      {
+        type: "full",
+        images: [{ src: "/images/projects/kankyo/gallery-2.png", alt: "Kankyo mobile" }],
+      },
+      {
+        type: "video",
+        video: { src: "/images/video-kankyo.mov", alt: "Demo Kankyo karaoke", theme: "dark" },
       },
       {
         type: "full",
