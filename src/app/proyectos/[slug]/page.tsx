@@ -115,7 +115,7 @@ export default async function ProjectPage({ params }: Props) {
             priority
           />
           {/* Dark gradient overlay at bottom */}
-          <div className="absolute bottom-0 left-0 right-0 h-[44%] bg-gradient-to-t from-black/77 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
           {/* Text on gradient */}
           <div className="absolute bottom-[24px] left-[20px] right-[20px] flex flex-col gap-[8px]">
             <p className="text-primary font-neue font-extrabold text-[20px]">
