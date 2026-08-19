@@ -100,7 +100,7 @@ export default async function ProjectPage({ params }: Props) {
         </div>
 
         {/* Mobile back arrow - fixed like hamburger */}
-        <Link href="/" className="md:hidden fixed top-[67px] left-[20px] z-50">
+        <Link href="/" className="md:hidden fixed top-[67px] left-[20px] z-50 w-[46px] h-[46px] rounded-full bg-[#fcfdff] backdrop-blur-[10px] flex items-center justify-center" style={{ boxShadow: "-6px 6px 6.55px rgba(0,0,0,0.05)" }}>
           <Image src="/images/Chevron-Left.svg" alt="Volver" width={24} height={24} />
         </Link>
 
