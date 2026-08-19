@@ -364,7 +364,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
       "El resultado es una identidad visual versátil y reconocible que construye un universo de marca sólido y coherente en sus diferentes aplicaciones.",
     ],
     heroImage: "/images/gallery9.png",
-    heroImageMobile: "/images/gallerymobilehero10.png",
+    heroImageMobile: "/images/gallerymobilenorawnew.png",
     gallery: [
       {
         type: "full",
