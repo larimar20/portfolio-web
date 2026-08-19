@@ -22,7 +22,7 @@ const experiencia = [
 
 const formacion = [
   { titulo: "Máster en UX/UI y Diseño Gráfico Avanzado", centro: "Idep Barcelona", periodo: "2024-2025" },
-  { titulo: "Postgrado en Diseño Gráfico", centro: "Idep Barcelona", periodo: "2023 – 2024" },
+  { titulo: "Posgrado en Diseño Gráfico", centro: "Idep Barcelona", periodo: "2023 – 2024" },
   { titulo: "Grado en Criminología y Seguridad Privada", centro: "Abat Oliba CEU", periodo: "2015 – 2019" },
 ];
 
